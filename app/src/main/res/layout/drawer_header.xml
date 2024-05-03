@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_marginTop="20dp"
+    android:gravity="bottom"
+    android:background="#BC1D1D"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="40dp"
+        android:elevation="0dp"
+        android:background="#150E0E">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/person"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Md Babla Islam"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:background="#C6A9A9"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="bilasislam5643@gmail.com"
+        android:background="#E09797"/>
+
+</LinearLayout>

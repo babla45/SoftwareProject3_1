@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="35dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D0FA4">
+
+        <ImageButton
+            android:id="@+id/menuButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu_24"
+            android:padding="5dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:background="@android:color/transparent"/>
+    </Toolbar>
+
+
+<!--    prev code-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingTop="0dp"
+        android:background="#0C0B0B"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <EditText
+                android:paddingTop="30dp"
+                android:id="@+id/navBarEditTextId"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="#B4B2B7"
+                android:backgroundTint="#C68080"
+                android:backgroundTintMode="src_in"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:hint="enter your name here"
+                android:inputType="text"
+                android:padding="20px"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="#300138"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/youtubeButtonId"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="casual"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:onClick="website"
+                    android:padding="8dp"
+                    android:text="YouTube"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/googleButtonId"
+                    android:layout_width="wrap_content"
+                    android:onClick="website"
+                    android:layout_margin="5dp"
+                    android:fontFamily="casual"
+                    android:textSize="15dp"
+                    android:padding="8dp"
+                    android:text="Google"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/portfolioButtonId"
+                    android:layout_width="wrap_content"
+                    android:onClick="website"
+                    android:layout_margin="5dp"
+                    android:textSize="15dp"
+                    android:fontFamily="casual"
+                    android:padding="8dp"
+                    android:text="Portfolio"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewId2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="#BD4343"
+                android:fontFamily="casual"
+                android:textStyle="bold"
+                android:padding="20dp"
+                android:text="@string/shortStory"
+                android:textAlignment="center"
+                android:textColor="#040404"
+                android:textSize="20sp" />
+
+            <!--previous code end-->
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

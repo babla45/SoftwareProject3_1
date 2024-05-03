@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group
+        android:id="@+id/group1">
+
+        <item
+            android:id="@+id/homeMenuId"
+            android:title="Home"
+            android:icon="@drawable/baseline_home_24"/>
+        <item
+            android:id="@+id/contactMenuId"
+            android:title="Contact"
+            android:icon="@drawable/baseline_contacts_24"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group2">
+
+        <item
+            android:id="@+id/settingMenuId"
+            android:title="Setting"
+            android:icon="@drawable/baseline_settings_24"/>
+        <item
+            android:id="@+id/shareMenuId"
+            android:title="Share"
+            android:icon="@drawable/baseline_share_24"/>
+
+    </group>
+
+
+
+
+</menu>
