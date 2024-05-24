@@ -10,69 +10,74 @@ android:layout_height="match_parent"
 tools:context=".registration_Activity">
 
 
-<LinearLayout
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_marginRight="20dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-    android:layout_width="match_parent"
-    android:layout_height="540dp">
-
-
-    <TextView
-        android:id="@+id/registerTextViewId"
-        android:text="Registration form"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:textAlignment="center"
-        android:padding="10dp"
-        android:layout_height="wrap_content"/>
+        android:gravity="center"
+        android:orientation="vertical">
 
 
-
-    <EditText
-        android:id="@+id/nameEditTextId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_border"
-        android:textStyle="bold"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="30dp"
-        android:textAlignment="center"
-        android:padding="15dp"
-        android:hint="Enter Your Name" />
-
-    <EditText
-        android:id="@+id/passwordEditTextId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_border"
-        android:textStyle="bold"
-        android:inputType="textPassword"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="30dp"
-        android:textAlignment="center"
-        android:padding="15dp"
-        android:hint="Enter Your Password" />
+        <TextView
+            android:id="@+id/registerSetTextViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="User Registration form"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
 
 
+        <EditText
+            android:id="@+id/emailEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="Enter Your Email"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/passwordEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edit_text_border"
+            android:hint="Enter Your Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
 
-    <Button
-        android:id="@+id/registerButtonId"
-        android:background="@drawable/edit_text_border"
-        android:paddingRight="35dp"
-        android:paddingLeft="35dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register" />
+        <Button
+            android:id="@+id/registerButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_border"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Register" />
 
+        <TextView
+            android:id="@+id/loginTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Already have an account?  Login"
+            android:textColor="@color/black" />
 
-</LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

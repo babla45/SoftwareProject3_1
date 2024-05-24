@@ -22,17 +22,18 @@
 
 
             <TextView
-                android:text="Log text"
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:textAlignment="center"
-                android:padding="10dp"
-                android:layout_height="wrap_content"/>
+                android:id="@+id/loginPageSetTextViewId"
+                android:layout_margin="15dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Login Form"/>
+
 
 
 
             <EditText
-                android:id="@+id/nameEditTextId"
+                android:id="@+id/emailEditTextId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_border"
@@ -42,7 +43,7 @@
                 android:layout_marginBottom="30dp"
                 android:textAlignment="center"
                 android:padding="15dp"
-                android:hint="Enter Your Name" />
+                android:hint="Enter Your Email" />
 
             <EditText
                 android:id="@+id/passwordEditTextId"
@@ -70,8 +71,17 @@
                 android:layout_height="wrap_content"
                 android:text="Login" />
 
+            <TextView
+                android:id="@+id/signUpTextViewId"
+                android:layout_margin="15dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?  Sign Up"/>
+
 
         </LinearLayout>
+
 
 
 </LinearLayout>
