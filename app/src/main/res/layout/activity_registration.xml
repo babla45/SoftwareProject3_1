@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:background="#E0DADA"
+android:layout_height="match_parent"
+tools:context=".registration_Activity">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="540dp">
+
+
+    <TextView
+        android:id="@+id/registerTextViewId"
+        android:text="Registration form"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
+
+
+
+    <EditText
+        android:id="@+id/nameEditTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:hint="Enter Your Name" />
+
+    <EditText
+        android:id="@+id/passwordEditTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:textStyle="bold"
+        android:inputType="textPassword"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:hint="Enter Your Password" />
+
+
+
+
+    <Button
+        android:id="@+id/registerButtonId"
+        android:background="@drawable/edit_text_border"
+        android:paddingRight="35dp"
+        android:paddingLeft="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+
+</LinearLayout>
+
+
+</LinearLayout>
