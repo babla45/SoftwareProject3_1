@@ -1,16 +1,24 @@
 package com.example.softwareproject3_1;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.firebase.database.*;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 public class blog extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -44,15 +52,18 @@ public class blog extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("MainActivity", "Error fetching data", databaseError.toException());
+                Log.e("blog", "Error fetching data", databaseError.toException());
             }
         });
 
-
-
-
-
-
-
+        // Handle the click event of the contribute button
+        Button contributeButton = findViewById(R.id.contributeButton);
+        contributeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(blog.this, AddBlog.class);
+                startActivity(intent);
+            }
+        });
     }
 }

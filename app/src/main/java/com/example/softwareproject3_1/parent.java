@@ -8,7 +8,7 @@ import java.util.Vector;
 
 public class parent {
     public static final parent instance = new parent();
-    private List<child> observers = new Vector<>();
+    public List<child> observers = new Vector<>();
 
     private parent() {} // Private constructor for Singleton pattern
 
