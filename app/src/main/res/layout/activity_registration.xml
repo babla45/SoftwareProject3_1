@@ -21,15 +21,16 @@ tools:context=".registration_Activity">
         android:orientation="vertical">
 
 
+
         <TextView
-            android:id="@+id/registerSetTextViewId"
-            android:layout_width="match_parent"
+            android:id="@+id/messageId"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            android:text="User Registration form"
+            android:layout_margin="15dp"
+            android:text=""
             android:textAlignment="center"
-            android:textColor="@color/black" />
+            android:textColor="#E61515"
+            android:textStyle="italic" />
 
 
         <EditText
@@ -74,8 +75,15 @@ tools:context=".registration_Activity">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:textStyle="bold"
             android:text="Already have an account?  Login"
-            android:textColor="@color/black" />
+            android:textColor="#9C20AD" />
+
+        <ProgressBar
+            android:id="@+id/registerProgressBarId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
 
     </LinearLayout>
 

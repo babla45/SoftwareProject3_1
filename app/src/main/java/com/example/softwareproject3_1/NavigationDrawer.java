@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class NavigationDrawer extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -76,6 +77,11 @@ public class NavigationDrawer extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FirebaseAuth.getInstance().signOut();
+    }
 
     public void website(View view) {
         Intent intent=new Intent(NavigationDrawer.this, websiteManager.class);
