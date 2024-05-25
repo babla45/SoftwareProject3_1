@@ -19,17 +19,18 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/person"/>
+            android:src="@mipmap/ic_launcher2"/>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Md Babla Islam"
+        android:text="Developer: Md Babla Islam"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="8dp"
         android:textSize="15dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:background="#C6A9A9"/>
 
@@ -37,8 +38,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="bilasislam5643@gmail.com"
+        android:text="Email: bilasislam5643@gmail.com"
         android:background="#E09797"/>
 
 </LinearLayout>

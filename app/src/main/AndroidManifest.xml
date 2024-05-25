@@ -8,37 +8,29 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher2_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SoftwareProject3_1"
+        android:theme="@style/Base.Theme.SoftwareProject3_1"
         tools:targetApi="31">
 
         <!-- Notification Activity -->
         <activity
             android:name=".NotificationActivity"
             android:exported="true">
-
-
-
         </activity>
 
         <!-- Launcher activity -->
         <activity
-            android:name=".AddBlog"
+            android:name=".login_Activity"
             android:exported="true">
-
-
-
-
         </activity>
 
         <!-- Other activities -->
         <activity
             android:name=".blog"
-            android:exported="true"
-            >
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,22 +38,23 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".registration_Activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".websiteManager"
+            android:exported="false" />
 
         <activity
             android:name=".VideoActivity"
             android:exported="false" />
-        <activity
-            android:name=".registration_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".login_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".websiteManager"
-            android:exported="false" />
+
         <activity
             android:name=".NavigationDrawer"
-            android:exported="false" />
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

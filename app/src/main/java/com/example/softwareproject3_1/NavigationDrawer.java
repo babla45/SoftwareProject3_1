@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class NavigationDrawer extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -26,11 +27,6 @@ public class NavigationDrawer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         drawerLayout=findViewById(R.id.main);
         imageButton=findViewById(R.id.menuButtonId);
@@ -64,6 +60,12 @@ public class NavigationDrawer extends AppCompatActivity {
                 {
                     Toast.makeText(NavigationDrawer.this, "Share menu clicked", Toast.LENGTH_SHORT).show();
                 }
+                else if(menuId==R.id.logOutMenuId)
+                {
+                    startActivity(new Intent(NavigationDrawer.this, login_Activity.class));
+                    Toast.makeText(NavigationDrawer.this, "Bye! See You Later", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
                 else
                 {
                     Toast.makeText(NavigationDrawer.this, "NO menu clicked", Toast.LENGTH_SHORT).show();
@@ -75,21 +77,28 @@ public class NavigationDrawer extends AppCompatActivity {
         });
 
     }
+    ///=================end of oncreat=============================
 
+    //user sign out
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FirebaseAuth.getInstance().signOut();
+    }
 
     public void website(View view) {
         Intent intent=new Intent(NavigationDrawer.this, websiteManager.class);
         if(view.getId()==R.id.youtubeButtonId)
         {
-            intent.putExtra("youtube","https://www.youtube.com");
+            intent.putExtra("website","https://www.youtube.com");
         }
         if(view.getId()==R.id.googleButtonId)
         {
-            intent.putExtra("youtube","https://www.google.com");
+            intent.putExtra("website","https://www.google.com");
         }
         if(view.getId()==R.id.portfolioButtonId)
         {
-            intent.putExtra("youtube","https://babla45.github.io/myPortfolio");
+            intent.putExtra("website","https://babla45.github.io/myPortfolio");
         }
         startActivity(intent);
     }
