@@ -29,7 +29,7 @@ tools:context=".registration_Activity">
             android:layout_margin="15dp"
             android:text="Register Your Account"
             android:textAlignment="center"
-            android:textColor="#673AB7"
+            android:textColor="#801A6F"
             android:textStyle="italic" />
 
 
