@@ -21,11 +21,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class registration_Activity extends AppCompatActivity implements View.OnClickListener {
 
     Button registerButton;
-    TextView registerMessage;
+    public TextView registerMessage;
     TextView registerPageToLoginPage;
     EditText email,password;
     ProgressBar progressBar;
@@ -50,6 +51,7 @@ public class registration_Activity extends AppCompatActivity implements View.OnC
 
         registerButton.setOnClickListener(this);
         registerPageToLoginPage.setOnClickListener(this);
+
     }
 
     @Override
@@ -68,10 +70,13 @@ public class registration_Activity extends AppCompatActivity implements View.OnC
 
     }
 
-    private void registerUser() {
+
+
+    //////////////////////
+
+     void registerUser() {
         String emailId=email.getText().toString().trim();
         String userPassword=password.getText().toString();
-
 
 
 
@@ -99,8 +104,9 @@ public class registration_Activity extends AppCompatActivity implements View.OnC
             return;
         }
 
+
+
         progressBar.setVisibility(View.VISIBLE);
-        startActivity(new Intent(registration_Activity.this,login_Activity.class));
 
         firebaseAuth.createUserWithEmailAndPassword(emailId, userPassword ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @SuppressLint("SetTextI18n")
@@ -114,9 +120,15 @@ public class registration_Activity extends AppCompatActivity implements View.OnC
                 }
                 else
                 {
-                    Toast.makeText(registration_Activity.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
-//                    registerSetText.setText("Registration Unsuccessful");
-                    registerMessage.setText("Registration Failed! Please check your internet connection");
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException)
+                    {
+                        registerMessage.setText("User already exists");
+                    }
+                    else
+                    {
+                        registerMessage.setText("Registration Failed!\n"+task.getException().getMessage());
+
+                    }
                 }
 
 
