@@ -18,11 +18,6 @@ public class websiteManager extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_website_manager);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         webView=findViewById(R.id.webViewId);
 
@@ -44,7 +39,7 @@ public class websiteManager extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null)
         {
-            String text=bundle.getString("youtube");
+            String text=bundle.getString("website");
             if (text != null) {
                 url=text;
             }

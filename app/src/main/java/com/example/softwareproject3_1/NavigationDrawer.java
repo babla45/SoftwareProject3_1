@@ -27,11 +27,6 @@ public class NavigationDrawer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         drawerLayout=findViewById(R.id.main);
         imageButton=findViewById(R.id.menuButtonId);
@@ -82,7 +77,9 @@ public class NavigationDrawer extends AppCompatActivity {
         });
 
     }
+    ///=================end of oncreat=============================
 
+    //user sign out
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -93,15 +90,15 @@ public class NavigationDrawer extends AppCompatActivity {
         Intent intent=new Intent(NavigationDrawer.this, websiteManager.class);
         if(view.getId()==R.id.youtubeButtonId)
         {
-            intent.putExtra("youtube","https://www.youtube.com");
+            intent.putExtra("website","https://www.youtube.com");
         }
         if(view.getId()==R.id.googleButtonId)
         {
-            intent.putExtra("youtube","https://www.google.com");
+            intent.putExtra("website","https://www.google.com");
         }
         if(view.getId()==R.id.portfolioButtonId)
         {
-            intent.putExtra("youtube","https://babla45.github.io/myPortfolio");
+            intent.putExtra("website","https://babla45.github.io/myPortfolio");
         }
         startActivity(intent);
     }
