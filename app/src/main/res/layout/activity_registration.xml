@@ -27,9 +27,9 @@ tools:context=".registration_Activity">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text=""
+            android:text="Register Your Account"
             android:textAlignment="center"
-            android:textColor="#E61515"
+            android:textColor="#673AB7"
             android:textStyle="italic" />
 
 
