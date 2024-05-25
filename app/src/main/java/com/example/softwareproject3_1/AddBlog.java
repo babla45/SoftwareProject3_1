@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AddBlog  extends AppCompatActivity {
+public class  AddBlog  extends AppCompatActivity {
 
     private EditText titleEditText, contentEditText, subjectEditText;
     private DatabaseReference databaseReference;
@@ -50,7 +50,7 @@ public class AddBlog  extends AppCompatActivity {
 
         // Check if any field is empty
         if (TextUtils.isEmpty(title) || TextUtils.isEmpty(content) || TextUtils.isEmpty(subject)) {
-            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddBlog.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
 

@@ -28,6 +28,26 @@
         </activity>
 
 
+        <!-- Notification Activity -->
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Launcher activity -->
+        <activity
+            android:name=".AddBlog"
+            android:exported="true">
+        </activity>
+
+         <!-- Other activities -->
+        <activity
+            android:name=".blog"
+            android:exported="true">
+
+
+        </activity>
+
 
         <activity
             android:name=".registration_Activity"

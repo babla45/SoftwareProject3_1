@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
 }
-
 android {
     namespace = "com.example.softwareproject3_1"
     compileSdk = 34
@@ -31,7 +30,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-
 dependencies {
 
     implementation(libs.appcompat)
@@ -42,4 +40,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
+    implementation(libs.recyclerview)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.database)
+    
 }
