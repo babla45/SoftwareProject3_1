@@ -119,8 +119,7 @@ public class login_Activity extends AppCompatActivity implements View.OnClickLis
                     Toast.makeText(login_Activity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(login_Activity.this, NavigationDrawer.class));
                 } else {
-//                    Toast.makeText(login_Activity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                    setTextTextView.setText("Login Failed! Check your credentials.\nMake sure you have an account and check your internet connection");
+                    setTextTextView.setText("Login Failed!\n"+task.getException().getMessage());
                 }
 
             }
