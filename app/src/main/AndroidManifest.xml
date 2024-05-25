@@ -14,15 +14,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoftwareProject3_1"
         tools:targetApi="31">
+
+        <!-- Notification Activity -->
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true">
+
+
+
+        </activity>
+
+        <!-- Launcher activity -->
+        <activity
+            android:name=".AddBlog"
+            android:exported="true">
+
+
+
+
+        </activity>
+
+        <!-- Other activities -->
         <activity
             android:name=".blog"
-            android:exported="true">
+            android:exported="true"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".VideoActivity"
             android:exported="false" />
@@ -31,25 +55,13 @@
             android:exported="false" />
         <activity
             android:name=".login_Activity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".websiteManager"
             android:exported="false" />
         <activity
             android:name=".NavigationDrawer"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

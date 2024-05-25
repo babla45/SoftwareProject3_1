@@ -3,11 +3,14 @@ import android.os.Bundle;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.database.*;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class blog extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -44,5 +47,12 @@ public class blog extends AppCompatActivity {
                 Log.e("MainActivity", "Error fetching data", databaseError.toException());
             }
         });
+
+
+
+
+
+
+
     }
 }

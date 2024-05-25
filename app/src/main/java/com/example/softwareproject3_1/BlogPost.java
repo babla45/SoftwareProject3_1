@@ -3,10 +3,11 @@ package com.example.softwareproject3_1;
 public class BlogPost {
     private String title;
     private String content;
-    private String subject; // New field
+    private String subject;
 
-    // Required public constructor for Firebase Realtime Database
-    public BlogPost() {}
+    public BlogPost() {
+        // Required empty constructor for Firebase Realtime Database
+    }
 
     public BlogPost(String title, String content, String subject) {
         this.title = title;
@@ -14,6 +15,7 @@ public class BlogPost {
         this.subject = subject;
     }
 
+    // Getters and setters
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 

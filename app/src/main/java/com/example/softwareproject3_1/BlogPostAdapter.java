@@ -1,10 +1,12 @@
 package com.example.softwareproject3_1;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.softwareproject3_1.R;
 import java.util.List;
@@ -29,6 +31,31 @@ public class BlogPostAdapter extends RecyclerView.Adapter<BlogPostAdapter.BlogPo
         holder.titleTextView.setText(blogPost.getTitle());
         holder.contentTextView.setText(blogPost.getContent());
         holder.subjectTextView.setText(blogPost.getSubject()); // Set subject
+
+        holder.contentTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle between showing full content and truncated content
+                if (holder.contentTextView.getMaxLines() == 10) {
+                    // If already expanded, collapse the TextView
+                    holder.contentTextView.setMaxLines(3); // Set the original maxLines value
+                    holder.contentTextView.setEllipsize(TextUtils.TruncateAt.END); // Add ellipsis
+                } else {
+                    // If truncated, expand the TextView to show full content
+                    holder.contentTextView.setMaxLines(10); // Set a large value
+                    holder.contentTextView.setEllipsize(null); // Remove ellipsis
+                }
+            }
+        });
+
+
+
+
+
+
+
+
+
     }
 
     @Override
