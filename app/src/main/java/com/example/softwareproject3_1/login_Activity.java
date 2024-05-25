@@ -38,11 +38,7 @@ public class login_Activity extends AppCompatActivity implements View.OnClickLis
         FirebaseApp.initializeApp(this);
 
         firebaseAuth=FirebaseAuth.getInstance();
-//        if(firebaseAuth.getCurrentUser()!=null)
-//        {
-//            startActivity(new Intent(login_Activity.this, NavigationDrawer.class));
-//            finish();
-//        }
+
         progressBar=findViewById(R.id.loginProgressBarId);
         loginButton=findViewById(R.id.loginButtonId);
 
@@ -123,7 +119,7 @@ public class login_Activity extends AppCompatActivity implements View.OnClickLis
                     Toast.makeText(login_Activity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(login_Activity.this, NavigationDrawer.class));
                 } else {
-                    Toast.makeText(login_Activity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(login_Activity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                     setTextTextView.setText("Login Failed! Check your credentials.\nMake sure you have an account and check your internet connection");
                 }
 

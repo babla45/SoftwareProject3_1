@@ -63,7 +63,6 @@ public class registration_Activity extends AppCompatActivity implements View.OnC
 
         if(v.getId()==R.id.registerButtonId)
         {
-//            Toast.makeText(this, "Register button clicked", Toast.LENGTH_SHORT).show();
             registerUser();
         }
 
