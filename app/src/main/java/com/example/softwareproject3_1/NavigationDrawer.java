@@ -65,6 +65,12 @@ public class NavigationDrawer extends AppCompatActivity {
                 {
                     Toast.makeText(NavigationDrawer.this, "Share menu clicked", Toast.LENGTH_SHORT).show();
                 }
+                else if(menuId==R.id.logOutMenuId)
+                {
+                    startActivity(new Intent(NavigationDrawer.this, login_Activity.class));
+                    Toast.makeText(NavigationDrawer.this, "Bye! See You Later", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
                 else
                 {
                     Toast.makeText(NavigationDrawer.this, "NO menu clicked", Toast.LENGTH_SHORT).show();
