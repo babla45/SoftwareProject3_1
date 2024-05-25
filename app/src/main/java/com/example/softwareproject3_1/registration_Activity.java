@@ -2,6 +2,7 @@ package com.example.softwareproject3_1;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -117,15 +118,18 @@ public class registration_Activity extends AppCompatActivity implements View.OnC
                 {
                     Toast.makeText(registration_Activity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(registration_Activity.this,login_Activity.class));
+                    finish();
                 }
                 else
                 {
                     if(task.getException() instanceof FirebaseAuthUserCollisionException)
                     {
+                        registerMessage.setBackgroundColor(Color.parseColor("#FFffffff"));
                         registerMessage.setText("User already exists");
                     }
                     else
                     {
+                        registerMessage.setBackgroundColor(Color.parseColor("#FFffffff"));
                         registerMessage.setText("Registration Failed!\n"+task.getException().getMessage());
 
                     }
