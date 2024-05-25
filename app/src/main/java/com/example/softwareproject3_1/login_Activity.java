@@ -38,11 +38,11 @@ public class login_Activity extends AppCompatActivity implements View.OnClickLis
         FirebaseApp.initializeApp(this);
 
         firebaseAuth=FirebaseAuth.getInstance();
-        if(firebaseAuth.getCurrentUser()!=null)
-        {
-            startActivity(new Intent(login_Activity.this, NavigationDrawer.class));
-            finish();
-        }
+//        if(firebaseAuth.getCurrentUser()!=null)
+//        {
+//            startActivity(new Intent(login_Activity.this, NavigationDrawer.class));
+//            finish();
+//        }
         progressBar=findViewById(R.id.loginProgressBarId);
         loginButton=findViewById(R.id.loginButtonId);
 
