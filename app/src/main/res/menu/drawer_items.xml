@@ -11,9 +11,9 @@
             android:title="Home"
             android:icon="@drawable/baseline_home_24"/>
         <item
-            android:id="@+id/contactMenuId"
-            android:title="Contact"
-            android:icon="@drawable/baseline_contacts_24"/>
+            android:id="@+id/notificationMenuId"
+            android:title="Notifications"
+            android:icon="@drawable/notification"/>
 
     </group>
 
@@ -21,13 +21,10 @@
         android:id="@+id/group2">
 
         <item
-            android:id="@+id/settingMenuId"
-            android:title="Setting"
-            android:icon="@drawable/baseline_settings_24"/>
-        <item
-            android:id="@+id/shareMenuId"
-            android:title="Share"
-            android:icon="@drawable/baseline_share_24"/>
+            android:id="@+id/blogMenuId"
+            android:title="Blogs"
+            android:icon="@drawable/blog"/>
+
 
         <item
             android:id="@+id/logOutMenuId"

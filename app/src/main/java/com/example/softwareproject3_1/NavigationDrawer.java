@@ -51,19 +51,17 @@ public class NavigationDrawer extends AppCompatActivity {
                 int menuId=menuItem.getItemId();
                 if(menuId==R.id.homeMenuId)
                 {
-                    Toast.makeText(NavigationDrawer.this, "Home menu clicked", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(NavigationDrawer.this, "Home menu clicked", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(NavigationDrawer.this, NavigationDrawer.class));
                 }
-                else if(menuId==R.id.contactMenuId)
+                else if(menuId==R.id.notificationMenuId)
                 {
-                    Toast.makeText(NavigationDrawer.this, "Contact menu clicked", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(NavigationDrawer.this, NotificationActivity.class));
+
                 }
-                else if(menuId==R.id.settingMenuId)
+                else if(menuId==R.id.blogMenuId)
                 {
-                    Toast.makeText(NavigationDrawer.this, "Setting menu clicked", Toast.LENGTH_SHORT).show();
-                }
-                else if(menuId==R.id.shareMenuId)
-                {
-                    Toast.makeText(NavigationDrawer.this, "Share menu clicked", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(NavigationDrawer.this, blog.class));
                 }
                 else if(menuId==R.id.logOutMenuId)
                 {
@@ -93,18 +91,19 @@ public class NavigationDrawer extends AppCompatActivity {
         Intent intent=new Intent(NavigationDrawer.this, websiteManager.class);
         if(view.getId()==R.id.youtubeButtonId)
         {
-            intent.putExtra("youtube","https://www.youtube.com");
+            intent.putExtra("youtube","https://youtube.com/playlist?list=PLgH5QX0i9K3p9xzYLFGdfYliIRBLVDRV5&si=l2w3aAGn2wFC915u");
+            startActivity(intent);
         }
         if(view.getId()==R.id.googleButtonId)
         {
             intent.putExtra("youtube","https://www.google.com");
+            startActivity(intent);
         }
-        if(view.getId()==R.id.portfolioButtonId)
+        if(view.getId()==R.id.blogButtonId)
         {
-//            intent.putExtra("youtube","https://babla45.github.io/myPortfolio");
-            //
-            startActivity(new Intent(NavigationDrawer.this, blog.class));
+            Intent intent2=new Intent(NavigationDrawer.this, blog.class);
+            startActivity(intent2);
         }
-        startActivity(intent);
+
     }
 }
