@@ -60,6 +60,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="25dp"
 
@@ -73,7 +74,7 @@
                     android:layout_margin="5dp"
                     android:onClick="website"
                     android:padding="8dp"
-                    android:text="YouTube"
+                    android:text="Android Tutorial"
                     android:layout_height="wrap_content"/>
 
                 <Button
@@ -87,14 +88,14 @@
                     android:text="Google"
                     android:layout_height="wrap_content"/>
                 <Button
-                    android:id="@+id/portfolioButtonId"
+                    android:id="@+id/blogButtonId"
                     android:layout_width="wrap_content"
                     android:onClick="website"
                     android:layout_margin="5dp"
                     android:textSize="15dp"
                     android:fontFamily="casual"
                     android:padding="8dp"
-                    android:text="Portfolio"
+                    android:text="Blogs"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
@@ -108,12 +109,12 @@
                 android:layout_marginBottom="30dp"
                 android:background="#BD4343"
                 android:fontFamily="casual"
-                android:textStyle="bold"
                 android:padding="20dp"
                 android:text="@string/shortStory"
                 android:textAlignment="center"
                 android:textColor="#040404"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <!--previous code end-->
         </LinearLayout>
