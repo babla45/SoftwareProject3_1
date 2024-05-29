@@ -101,8 +101,6 @@ public class NavigationDrawer extends AppCompatActivity {
         }
         if(view.getId()==R.id.portfolioButtonId)
         {
-//            intent.putExtra("youtube","https://babla45.github.io/myPortfolio");
-            //
             startActivity(new Intent(NavigationDrawer.this, blog.class));
         }
         startActivity(intent);
